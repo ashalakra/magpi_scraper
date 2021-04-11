@@ -57,6 +57,8 @@ def downloadMagPi(URL):
             issueFile.write(fileRequest.content)
 
 get_page_urls()
+
+# Begin threading process
 for url in page_urls:
     processThread = threading.Thread(
         target=downloadMagPi, args=(url,))
